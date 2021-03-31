@@ -13,6 +13,9 @@ class Animal{
 private:
 	string name ;
 public:
+	// But as soon as a class has some constructor taking any number of parameters explicitly declared, 
+	// the compiler no longer provides an implicit default constructor, and no longer allows the declaration 
+	// of new objects of that class without arguments. 
 	Animal(string name){
 		this->name = name;
 	}
