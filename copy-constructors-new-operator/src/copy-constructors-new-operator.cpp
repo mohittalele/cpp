@@ -40,6 +40,8 @@ int main() {
 	pet.speak();
 
 	// this causes problem of shallow copy. We want deep copy
+	// To implement deep copy, the default shallow copy contructor 
+	// is overritten (Normally)
 	Animal dog = pet ; // By default the copy constructor will be called.
 
 	//dog.setProperties("Tommy", 100);
