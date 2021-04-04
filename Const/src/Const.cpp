@@ -16,7 +16,7 @@ public:
 	// But as soon as a class has some constructor taking any number of parameters explicitly declared, 
 	// the compiler no longer provides an implicit default constructor, and no longer allows the declaration 
 	// of new objects of that class without arguments. 
-	Animal(string name){
+	Animal(string name = "Lion"){
 		this->name = name;
 	}
 	void setName(string name){
@@ -54,6 +54,10 @@ int main() {
 	*pvalue = 100 ; // error with this : const int * pvalue = & value ; value pinted to by pointer is constant .
 
 	cout << "*pvalue : " << *pvalue << endl ;
+
+	cout << "\n\n" << flush ;
+	Animal random_Animal ; // object with the deafult values
+	random_Animal.speakName() ;
 
 	return 0;
 }
