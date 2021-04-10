@@ -39,6 +39,10 @@ int main()
     vector<int> vec4 (vec1.begin() + 1 , vec1.end() -1) ;
     printer1(&vec4);
 
+    // Method 5 : fill the vector after its created 
+    fill(vec1.begin(),vec1.end(), 33) ;
+    printer1(&vec1) ;
+
     return 0 ;
 }
 
