@@ -10,7 +10,7 @@
 using namespace std;
 
 // copy of the variable in due to function parameter
-void printer(string myName){
+void printer(string myName = "Default Name"){
 	cout << " in Printer function function " << ", value : " << myName << "  address "  << &myName << endl ;
 	cout << myName << endl ;
 }
@@ -21,5 +21,6 @@ int main() {
 	string myName = "mohit" ;
 	cout << " in main function " << ", value : " << myName << "  address "  << &myName << endl ;
 	printer(myName) ;
+	printer() ;
 	return 0;
 }
