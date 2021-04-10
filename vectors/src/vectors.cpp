@@ -23,15 +23,43 @@ int main() {
 	cout << strings.size() << endl ;
 	strings.pop_back();
 	strings.push_back("next");
-	vector <string>::iterator ptr = strings.begin() ;
-	for ( ptr= strings.begin(); ptr < strings.end() ; ptr ++){
-		cout << *ptr << endl ;
+	{
+		vector <string>::iterator ptr = strings.begin() ;
+		for ( ptr= strings.begin(); ptr < strings.end() ; ptr ++){
+		cout << *ptr  << "  ";
+		}
+	
+	ptr = ptr-2 ;
+	cout << *ptr << endl ;
+	cout << "end -2 :: " <<*ptr << endl ;
 	}
-	ptr = ptr+2 ;
-	cout << "communication " <<*ptr << endl ;
+	//vector<int> *v = new vector<int>(2,3,5) ;
+	vector<int> vec { 10, 20, 30 };
+
+	// Method 1 : iterate throught the vector 
+	for (vector<int>::iterator ptr = vec.begin() ; ptr < vec.end(); ptr ++){
+		cout << *ptr << "  " ;
+	}
+	cout <<"\n" ;
+
+	// method 2 : iterate over the vector 
+	for (int v : vec){
+		cout << v << "  " ;
+	}
+	cout << "\n" ;
 
 
-	int myarray[]={1,2,3,4,5} ;
+	vector<int> *vec2 = new vector<int>{10,11,12,13,14,15};
+		// Method 1 : iterate throught the vector 
+	for (vector<int>::iterator ptr = (*vec2).begin() ; ptr < (*vec2).end(); ptr ++){
+		cout << *ptr << "  " ;
+	}
+	cout <<"\n" ;
 
+	// method 2 : iterate over the vector 
+	for (int v : (*vec2)){
+		cout << v << "  " ;
+	}	cout <<"\n" ;
+	delete vec2 ;
 	return 0;
 }
