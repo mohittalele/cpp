@@ -56,7 +56,13 @@ int main() {
 	}
 	cout <<"\n" ;
 
-	// method 2 : iterate over the vector 
+	// Method 3 : iterate over the vector
+
+	for(int i = 0 ; i < vec.size(); i++){
+		cout << vec.at(i) << " " ;
+	}
+	cout << endl ;
+	// method 4 : iterate over the vector 
 	for (int v : (*vec2)){
 		cout << v << "  " ;
 	}	cout <<"\n" ;
