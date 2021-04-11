@@ -16,6 +16,9 @@ class Polygon{
         double getHeight(){
             return height ;
         }
+        void printer(){
+            cout << "dummy printer" << endl ;
+        }
 };
 
 class Rectangle: public Polygon{
@@ -24,6 +27,7 @@ class Rectangle: public Polygon{
     // the base class will be called.
         Rectangle(double w , double h): Polygon(w,h) {}
         double getArea(){
+            Polygon::printer() ;
             return getHeight() * getWidth() ;
         }
 };
